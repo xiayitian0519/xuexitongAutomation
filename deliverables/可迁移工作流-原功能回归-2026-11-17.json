@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "at": "2026-11-17T09:07:06.916Z",
+  "revision": "2026-11-17-material-recovery-v1",
+  "passed": true,
+  "scripts": 17,
+  "groups": 186,
+  "elapsedMs": 6029,
+  "newBrowsers": 0,
+  "desktopActions": 0,
+  "platformRequests": 0,
+  "paidCalls": 0,
+  "results": [
+    {
+      "script": "tests/verify-exam-material-completeness.mjs",
+      "passed": true,
+      "groups": 17,
+      "elapsedMs": 1708
+    },
+    {
+      "script": "tests/verify-exam-audio-map.mjs",
+      "passed": true,
+      "groups": 23,
+      "elapsedMs": 155
+    },
+    {
+      "script": "tests/verify-exam-audio-materials.mjs",
+      "passed": true,
+      "groups": 7,
+      "elapsedMs": 344
+    },
+    {
+      "script": "tests/verify-exam-image-cache.mjs",
+      "passed": true,
+      "groups": 20,
+      "elapsedMs": 1260
+    },
+    {
+      "script": "tests/verify-wb-receipts.mjs",
+      "passed": true,
+      "groups": 17,
+      "elapsedMs": 567
+    },
+    {
+      "script": "tests/verify-exam-model-retention.mjs",
+      "passed": true,
+      "groups": 11,
+      "elapsedMs": 754
+    },
+    {
+      "script": "tests/verify-exam-images.mjs",
+      "passed": true,
+      "groups": 8,
+      "elapsedMs": 112
+    },
+    {
+      "script": "tests/verify-exam-audio-parts.mjs",
+      "passed": true,
+      "groups": 5,
+      "elapsedMs": 133
+    },
+    {
+      "script": "tests/verify-exam-blank-prompts.mjs",
+      "passed": true,
+      "groups": 4,
+      "elapsedMs": 1176
+    },
+    {
+      "script": "tests/verify-exam-recovery.mjs",
+      "passed": true,
+      "groups": 12,
+      "elapsedMs": 1729
+    },
+    {
+      "script": "tests/verify-listening-pipeline.mjs",
+      "passed": true,
+      "groups": 15,
+      "elapsedMs": 984
+    },
+    {
+      "script": "tests/verify-wb-cli.mjs",
+      "passed": true,
+      "groups": 16,
+      "elapsedMs": 371
+    },
+    {
+      "script": "tests/verify-cli-long-prompt.mjs",
+      "passed": true,
+      "groups": 1,
+      "elapsedMs": 96
+    },
+    {
+      "script": "tests/verify-text-questions.mjs",
+      "passed": true,
+      "groups": 11,
+      "elapsedMs": 3085
+    },
+    {
+      "script": "tests/verify-exam-result-continuity.mjs",
+      "passed": true,
+      "groups": 5,
+      "elapsedMs": 820
+    },
+    {
+      "script": "tests/verify-entry-table.mjs",
+      "passed": true,
+      "groups": 6,
+      "elapsedMs": 850
+    },
+    {
+      "script": "tests/verify-session-diagnostics.mjs",
+      "passed": true,
+      "groups": 8,
+      "elapsedMs": 216
+    }
+  ],
+  "limits": [
+    "Synthetic fixtures; no new live end-to-end validation.",
+    "Group counts combine assertions and scenario groups; not a count of real assignments."
+  ]
+}

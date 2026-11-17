@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {JSDOM} from 'jsdom';
+import {ExamPage} from '../automation/exam-page.mjs';
+const identity={courseKey:'course:1:2',examId:'123',title:'Unit 5单元测试'};
+const dom=new JSDOM(`<input id="examId" value="123"><table><tr><td>考试名称</td><td>Unit 5单元测试</td></tr></table><i class="agree_check"></i><a id="startBtn">进入考试</a>`,{url:'https://fixture.chaoxing.com/exam-ans/exam/test/examcode/examnotes?examId=123',runScripts:'outside-only'});
+dom.window.HTMLElement.prototype.getClientRects=function(){return [{width:1,height:1}];};
+Object.defineProperty(dom.window.HTMLElement.prototype,'innerText',{get(){return this.textContent;}});
+dom.window.CSS={escape:x=>x};
+const page={url:()=>dom.window.location.href,evaluate:async(fn,arg)=>dom.window.eval('('+fn.toString()+')')(arg)};
+assert.equal((await new ExamPage(page,identity).read()).identityMatches,true);
+assert.equal((await new ExamPage(page,{...identity,title:'Unit 4单元测试'}).read()).identityMatches,false);
+assert.equal((await new ExamPage(page,{...identity,examId:'999'}).read()).identityMatches,false);
+assert.equal((await new ExamPage(page,identity).read()).kind,'entry-ready');
+dom.window.document.body.insertAdjacentHTML('beforeend','<div>请完成安全验证</div><div>向右拖动滑块填充拼图</div>');
+assert.equal((await new ExamPage(page,identity).read()).kind,'human-verification');
+await assert.rejects(new ExamPage(page,identity).click('entry'),/HUMAN_VERIFICATION_REQUIRED/);
+dom.window.close();console.log('PASS 6 entry-table and human-verification checks; new browsers 0');

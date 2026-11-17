@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {JSDOM} from 'jsdom';
+import {ExamAnswerAdapter} from '../automation/exam-answer-adapter.mjs';
+const dom=new JSDOM(`<div class="singleQuesId" data="card"><div class="mark_name">Read passage [A] alpha [B] beta <a class="asFlagBtn"><svg></svg></a></div><div class="reading_answer"><div class="reader_answer_tit" id="prompt1">Statement one</div></div><div class="reading_answer"><div class="reader_answer_tit" id="prompt2">Statement two</div></div><textarea id="answerEditor1" data-frame-id="ueditor_1" data-prompt-id="prompt1"></textarea><textarea id="answerEditor2" data-frame-id="ueditor_2" data-prompt-id="prompt2"></textarea><iframe id="ueditor_1"></iframe><iframe id="ueditor_2"></iframe><button id="save_1"></button><button id="save_2"></button></div>`,{url:'https://fixture.chaoxing.com/exam-ans/mooc2/exam/preview',runScripts:'outside-only'});
+Object.defineProperty(dom.window.HTMLElement.prototype,'innerText',{get(){return this.textContent;}});
+const page={url:()=>dom.window.location.href,evaluate:async(fn,arg)=>dom.window.eval('('+fn.toString()+')')(arg),locator:()=>({evaluateAll:async()=>[]}),frames:()=>[]};
+const adapter=new ExamAnswerAdapter(page);adapter.readValues=async()=>({});
+const snap=await adapter.extract();
+assert.equal(snap.questions[0].blankCount,2);
+assert.match(snap.questions[0].question,/1\. Statement one\n2\. Statement two/);
+assert.equal(snap.map[0].blanks[1].saveId,'save_2');
+dom.window.document.querySelector('.asFlagBtn').remove();dom.window.document.querySelector('.mark_name').insertAdjacentHTML('beforeend','<svg></svg>');
+await assert.rejects(adapter.extract(),/exam-vector-material/);
+dom.window.close();console.log('PASS 4 blank prompt and icon boundary checks; no browsers');

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {assignExamAudio} from '../automation/exam-answer-adapter.mjs';
+const sources=[{sourceUrl:'https://a.chaoxing.com/1.mp3',qid:'x'},{sourceUrl:'https://a.chaoxing.com/2.mp3',qid:'x'}];
+const map=[{id:1,qid:'x',audioPart:1},{id:2,qid:'x',audioPart:1},{id:3,qid:'x',audioPart:2}];
+assert.deepEqual(assignExamAudio(sources,map).map(x=>x.questionIds),[[1,2],[3]]);
+assert.deepEqual(assignExamAudio([sources[0],sources[0]],map).map(x=>x.questionIds),[[1,2,3]]);
+assert.throws(()=>assignExamAudio(sources,[{id:1,qid:'x'}]),/UNRESOLVED/);
+assert.throws(()=>assignExamAudio(sources,[{id:1,qid:'x',audioPart:3}]),/UNRESOLVED/);
+assert.throws(()=>assignExamAudio(sources,[{id:1,qid:'wrong'}]),/MAPPING_UNKNOWN/);
+console.log('PASS 5 explicit audio-part mapping checks; no paid calls');

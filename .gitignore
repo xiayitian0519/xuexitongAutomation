@@ -1,0 +1,10 @@
+.automation.local/
+.tmp/
+node_modules/
+automation/node_modules/
+*.log
+*.local
+.env
+.env.*
+!.env.example
+__pycache__/

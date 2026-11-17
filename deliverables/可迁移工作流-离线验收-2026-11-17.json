@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "at": "2026-11-17T09:07:14.711Z",
+  "revision": "2026-11-17-portable-v1",
+  "passed": true,
+  "scripts": 4,
+  "groups": 89,
+  "elapsedMs": 13846,
+  "newBrowsers": 0,
+  "desktopActions": 0,
+  "networkRequests": 0,
+  "paidCalls": 0,
+  "results": [
+    {
+      "script": "tests/verify-workflow-setup.mjs",
+      "passed": true,
+      "groups": 26,
+      "elapsedMs": 194
+    },
+    {
+      "script": "tests/verify-session-bootstrap.mjs",
+      "passed": true,
+      "groups": 32,
+      "elapsedMs": 3046
+    },
+    {
+      "script": "tests/verify-portable-package.mjs",
+      "passed": true,
+      "groups": 17,
+      "elapsedMs": 13826
+    },
+    {
+      "script": "tests/verify-listening-setup.mjs",
+      "passed": true,
+      "groups": 14,
+      "elapsedMs": 177
+    }
+  ],
+  "limits": [
+    "Injected browser engines and package runners; no actual installation or authentication.",
+    "A new-machine real browser and real task are not validated by this suite."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "version": "2026-11-17-portable-v1",
+  "zipFile": "学习通自动化-2026-11-17-portable-v1-7b77d166.zip",
+  "sha256": "964629f9cd68f0dba9cbf4de2498a67d8038dffaf6a79d0289526cc16a059190",
+  "sourceFiles": 124,
+  "archiveEntries": 125,
+  "sourceBytes": 946605,
+  "zipBytes": 989863,
+  "crcVerified": true,
+  "fileHashesVerified": true,
+  "privateStateExcluded": true,
+  "relocatedToSpaceAndChinesePath": true,
+  "syntaxFiles": 95,
+  "relocatedOfflineScripts": 4,
+  "relocatedOfflineGroups": 89,
+  "rebuiltWithSameSourceHashes": true,
+  "newBrowsers": 0,
+  "desktopActions": 0,
+  "networkRequests": 0,
+  "paidCalls": 0,
+  "limits": [
+    "No clean-machine npm installation, authentication, real Edge or platform task was executed."
+  ]
+}

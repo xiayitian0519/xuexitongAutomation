@@ -1,0 +1,656 @@
+{
+  "schemaVersion": 1,
+  "package": "学习通自动化",
+  "createdAt": "2026-11-17T09:09:02.437Z",
+  "version": "2026-11-17-portable-v1",
+  "sourceFileCount": 124,
+  "sourceBytes": 946605,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 117,
+      "sha256": "41426a8a0868c03eff20a1c00cf9e76e8f7d263335bf9801bd24f51ecaaeb1b4"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3964,
+      "sha256": "91f96518d62cd02305f4ea199c63a6a79fbfd5dc5f81593cc0e1474657c108dc"
+    },
+    {
+      "path": "automation/browser-driver.mjs",
+      "bytes": 28834,
+      "sha256": "afd48ea1eea8ac340218ebff82cd99385dd280cb0ee270d00821979824986e5c"
+    },
+    {
+      "path": "automation/control.mjs",
+      "bytes": 1615,
+      "sha256": "fed6481fb679a2f54213abe02fb8908cbb47a815566c89449b21834b6a5844d2"
+    },
+    {
+      "path": "automation/diagnostics.mjs",
+      "bytes": 1734,
+      "sha256": "2725f33a294426bb83e7bcbb30b690d982d6b23f465a52552f03332b9adf9896"
+    },
+    {
+      "path": "automation/exam-answer-adapter.mjs",
+      "bytes": 13576,
+      "sha256": "fc8599e7b5ebaf50c2d9b0a2991741514603c730b97a3c8bc42a216c828b4e29"
+    },
+    {
+      "path": "automation/exam-audio-map.mjs",
+      "bytes": 5031,
+      "sha256": "96bc184b62cd0f914545753f68a41754b9c57ccb2366ebc8691bfa7e9d04e457"
+    },
+    {
+      "path": "automation/exam-image-materials.mjs",
+      "bytes": 14761,
+      "sha256": "c1c9317f97a822b1f67575b1cd2643bc07627bff702449d8e9dd7645a0a718f2"
+    },
+    {
+      "path": "automation/exam-materials.mjs",
+      "bytes": 3903,
+      "sha256": "0743fe7f94630189e7efebe5ae21b0742d587f714ec8b26ce06b878094344b91"
+    },
+    {
+      "path": "automation/exam-model-recovery.mjs",
+      "bytes": 1978,
+      "sha256": "96a18e38a7b4cd6a5e2b16d8fd657a3bbfb86eb04e172cd5cdff4dc0338cb87b"
+    },
+    {
+      "path": "automation/exam-page.mjs",
+      "bytes": 9130,
+      "sha256": "8036a554ab80f542ec3faeadd1130c8905ad0ae1feaa7a3f1dcdfe0fa5b64fd3"
+    },
+    {
+      "path": "automation/exam-paper-snapshot.mjs",
+      "bytes": 11011,
+      "sha256": "c44879fb649fd0de8d6797d0308c17b96084d6afe7a5e665fd14f9cbe1a74b1e"
+    },
+    {
+      "path": "automation/exam-question-groups.mjs",
+      "bytes": 1191,
+      "sha256": "7ec5dea7ef4f0e2f07f0957dfbc19efd2001d18a0533831c839279d2b8ef24ac"
+    },
+    {
+      "path": "automation/exam-runner.mjs",
+      "bytes": 22739,
+      "sha256": "f6ec04209dd4332e2e5009ffa010ba47285ac734a7f60dd8dac2085ffa753f19"
+    },
+    {
+      "path": "automation/EXAM.md",
+      "bytes": 3334,
+      "sha256": "26af681cdf258a523c2dd0b5bcf133b25cf6cdcc9d2290d03bc8165a55f1ca5f"
+    },
+    {
+      "path": "automation/exam.mjs",
+      "bytes": 5423,
+      "sha256": "49fb8ffaac5a9d900819fe08307cb691eea79c91502d43fee3b492a985ad7c5d"
+    },
+    {
+      "path": "automation/existing-session.mjs",
+      "bytes": 3965,
+      "sha256": "a5f034daefacb1c6d047972db97bacef0d48839fe3c6f640a2b7e031bb04a96b"
+    },
+    {
+      "path": "automation/page-snapshot.mjs",
+      "bytes": 9271,
+      "sha256": "14610e4428f4f0d330049acb2da197af2fd4612d87be59d22b49b49448bfd314"
+    },
+    {
+      "path": "automation/pre-submit-recovery.mjs",
+      "bytes": 6159,
+      "sha256": "7041844ec09e2d3cd20c3518e04e54a98cc90345b31e3db6611ceb1ed182a862"
+    },
+    {
+      "path": "automation/question-policy.mjs",
+      "bytes": 1545,
+      "sha256": "8c8feee655601b637ffec7290d016ca89e45f9f9425fea6e00fdc962cd0a287b"
+    },
+    {
+      "path": "automation/README.md",
+      "bytes": 1771,
+      "sha256": "41a25334737a6b6a71f11836153110fd41715cc507b82c4d295324376a9da0f5"
+    },
+    {
+      "path": "automation/run.mjs",
+      "bytes": 22752,
+      "sha256": "08922fbeb3234651c0e42afc97b0e6e82b80d3638661ea2298a8632caa4542d9"
+    },
+    {
+      "path": "automation/session-inspect.mjs",
+      "bytes": 897,
+      "sha256": "096e98f389589cada18a97a545d5dcb3f2f18c36a03e8a09b7fde53f6f211e3c"
+    },
+    {
+      "path": "automation/session-owner.mjs",
+      "bytes": 18164,
+      "sha256": "9e4a4ff8ebe66ea89d8762bce81089189af4d53d9e568963e217a3d86d110381"
+    },
+    {
+      "path": "automation/session-protocol.mjs",
+      "bytes": 11162,
+      "sha256": "116f7c2641ef405a898905094a730811bb853e3dca2041fa715c41f39f947219"
+    },
+    {
+      "path": "automation/setup.mjs",
+      "bytes": 26971,
+      "sha256": "7e0f104265f81cb20a8def52c7936dc2e325e0451207f2a2cd1c93368f06776e"
+    },
+    {
+      "path": "automation/start.cmd",
+      "bytes": 264,
+      "sha256": "165c9020b22c170a96def2499e93743369f1c8e61c8e5029cb6ebd48c84454b0"
+    },
+    {
+      "path": "automation/task-ledger.mjs",
+      "bytes": 4431,
+      "sha256": "69bfcf54e44bd085cab0924c02cd5b79dff8d9e3520a4a64356892759de310d8"
+    },
+    {
+      "path": "automation/task-queue.mjs",
+      "bytes": 4580,
+      "sha256": "a697345c57d1319f77aa20e1ecc0a36a5c08c5be13da934fc3439745ba4062f9"
+    },
+    {
+      "path": "automation/workflow-state.mjs",
+      "bytes": 1003,
+      "sha256": "693d6d5b0b9f635b77669005b329d534f54120de757d7bd36175a373f6cb303a"
+    },
+    {
+      "path": "deepseek-console/answer-contract.mjs",
+      "bytes": 4727,
+      "sha256": "97a1cf9b0a6a934f738b95a6bf38bad058a53a20b20f4566cb486e0adfa4a4fb"
+    },
+    {
+      "path": "deepseek-console/deepseek-local.mjs",
+      "bytes": 9378,
+      "sha256": "0fa9505d42fd5c9d59cae37655fcdf7540fc4be9a18080fb6f65d2284045efec"
+    },
+    {
+      "path": "deepseek-console/deepseek-request.mjs",
+      "bytes": 2905,
+      "sha256": "cae4132835cca602a4c11d6b462adb817a09b4cf8db35e205466f5948bb0ea40"
+    },
+    {
+      "path": "deepseek-console/start-local-service-cli.cmd",
+      "bytes": 1430,
+      "sha256": "dff22bfe6150c9993fd781ababea94ff482267519ada8c83643445f44986ae6e"
+    },
+    {
+      "path": "deepseek-console/start-local-service.cmd",
+      "bytes": 1376,
+      "sha256": "68c2b907ed8eadbc8b2dbc61eee347beb97d9b5c9ec84afd6c4f52eb77ff7192"
+    },
+    {
+      "path": "deepseek-console/wb-cli-request.mjs",
+      "bytes": 19072,
+      "sha256": "b93670ac865c7c71f13bb5cd172ece4a6f34ba6627fed5766c07b1934cb51d07"
+    },
+    {
+      "path": "deepseek-console/xuexitong-console.js",
+      "bytes": 100658,
+      "sha256": "d5cca453b8b8d64256afea7445363091406cc0a23e5c4ac12762be0368343905"
+    },
+    {
+      "path": "deliverables/学习通自动化工作流规则.md",
+      "bytes": 2461,
+      "sha256": "2e39ff3308671a59948e67d118601827573ef97c27228fdfd7dce5edbd28b0e9"
+    },
+    {
+      "path": "distribution/templates/AGENTS.md",
+      "bytes": 3964,
+      "sha256": "91f96518d62cd02305f4ea199c63a6a79fbfd5dc5f81593cc0e1474657c108dc"
+    },
+    {
+      "path": "distribution/templates/AUTOMATION.md",
+      "bytes": 1771,
+      "sha256": "41a25334737a6b6a71f11836153110fd41715cc507b82c4d295324376a9da0f5"
+    },
+    {
+      "path": "distribution/templates/EXAM.md",
+      "bytes": 3334,
+      "sha256": "26af681cdf258a523c2dd0b5bcf133b25cf6cdcc9d2290d03bc8165a55f1ca5f"
+    },
+    {
+      "path": "distribution/templates/LISTENING.md",
+      "bytes": 3516,
+      "sha256": "8b2de453aaeba1c3121b9a3caebbebea417f4f5eb79d721a891cf525ddb78e34"
+    },
+    {
+      "path": "distribution/templates/PROJECT_CONTEXT.md",
+      "bytes": 1223,
+      "sha256": "a739683a2922e9b59f9fe0c5278e7328d9b2309ec4aef942c6b670b3823b6b5a"
+    },
+    {
+      "path": "distribution/templates/README.md",
+      "bytes": 3636,
+      "sha256": "286b5ef3147a7b05d54537cc653857839d578d0e2e948bbf704e630400f6e121"
+    },
+    {
+      "path": "distribution/templates/WORKBUDDY_START.md",
+      "bytes": 2465,
+      "sha256": "e33fa832ae9707f46639e42fb0bc12b2a497229ead88a119e17cb4835a8a6670"
+    },
+    {
+      "path": "distribution/templates/工作流规则.md",
+      "bytes": 2461,
+      "sha256": "2e39ff3308671a59948e67d118601827573ef97c27228fdfd7dce5edbd28b0e9"
+    },
+    {
+      "path": "listening/benchmark.mjs",
+      "bytes": 4883,
+      "sha256": "9226852d53506c95099883050d4cab8c49896701d08770d4d22dcea93310956b"
+    },
+    {
+      "path": "listening/contracts.mjs",
+      "bytes": 9436,
+      "sha256": "551a12ce5e3f3378b03b4418e60789bb346eac184cba1be9d32763ca063084af"
+    },
+    {
+      "path": "listening/fetch-audio.mjs",
+      "bytes": 6283,
+      "sha256": "d87bfd2be82e21c41b54f5838c09c7c938b174e8d31155bc901b6a59cff16051"
+    },
+    {
+      "path": "listening/local-paths.mjs",
+      "bytes": 1034,
+      "sha256": "71797565a951b51f86a7522b20b27369476d7e0791d9beb840e5232dba1ee4b4"
+    },
+    {
+      "path": "listening/pipeline.mjs",
+      "bytes": 12452,
+      "sha256": "e833b855b41282edab9765b00357ca1ec874e24b3d316c22dbb5693c9d8ba059"
+    },
+    {
+      "path": "listening/practice.mjs",
+      "bytes": 3782,
+      "sha256": "2af0199118260b79c58aa46ce21b7215ca109a1e06d8318e98e0a85e022b0f21"
+    },
+    {
+      "path": "listening/preflight.mjs",
+      "bytes": 1396,
+      "sha256": "dfca21ae21fc26ad8ea1d088b019cf8819536138b439221243520a11f0e677ac"
+    },
+    {
+      "path": "listening/README.md",
+      "bytes": 3516,
+      "sha256": "8b2de453aaeba1c3121b9a3caebbebea417f4f5eb79d721a891cf525ddb78e34"
+    },
+    {
+      "path": "listening/requirements.txt",
+      "bytes": 22,
+      "sha256": "a0e33d44fb0f6e7b348f475f40b9395baa4f2c9739a6bdba663835169f600c84"
+    },
+    {
+      "path": "listening/runtime-profile.mjs",
+      "bytes": 1852,
+      "sha256": "d4f5014e35962a7f58e39bc7e483de2b01bce6e4e7278ccba6dfa065b48548be"
+    },
+    {
+      "path": "listening/transcribe.py",
+      "bytes": 4746,
+      "sha256": "6fc94f453261354ba6045d03e8563876cc25ca2c4485bc8284b06c228da424f9"
+    },
+    {
+      "path": "listening/transcriber.mjs",
+      "bytes": 3375,
+      "sha256": "dde49f3844ad05c1e71be874c527a58f306a21927bcdd5b93f92b12df2b9144f"
+    },
+    {
+      "path": "listening/transcript-repair.mjs",
+      "bytes": 3035,
+      "sha256": "361f2c530ff08bd86ddd5e0d55f8b3511ee0ba2783b9bd5a8c3fb646c019fe22"
+    },
+    {
+      "path": "listening/transcript-store.mjs",
+      "bytes": 4727,
+      "sha256": "14ef6fcbfe8dd0b09317c6888ae4d5050358eb5bb20fa34e9cde5c6b8b80f739"
+    },
+    {
+      "path": "package.json",
+      "bytes": 781,
+      "sha256": "013299f4349b639ff1fc7c2ffcb39cfe075e46851e99a0988655d69089c45b82"
+    },
+    {
+      "path": "PROJECT_CONTEXT.md",
+      "bytes": 1223,
+      "sha256": "a739683a2922e9b59f9fe0c5278e7328d9b2309ec4aef942c6b670b3823b6b5a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3636,
+      "sha256": "286b5ef3147a7b05d54537cc653857839d578d0e2e948bbf704e630400f6e121"
+    },
+    {
+      "path": "scripts/package-workflow.mjs",
+      "bytes": 16251,
+      "sha256": "1e5201d671d7886cbc01e43cf1f823a63b0b18eb0d28f87fc279bf475d81b3b5"
+    },
+    {
+      "path": "tests/fixtures/exam/page.mjs",
+      "bytes": 4929,
+      "sha256": "2bcba6a1c99e89bec3aa1b808ff51fbb2fea4b8e196101bca6011d06a073dd8c"
+    },
+    {
+      "path": "tests/verify-answer-policy.mjs",
+      "bytes": 11580,
+      "sha256": "99367dc23704cb42db8a6d22e9a01c1531011ee811fd60fb37052b7fb09beab7"
+    },
+    {
+      "path": "tests/verify-auto-submit.mjs",
+      "bytes": 11149,
+      "sha256": "8b22afe192af5fabddfaf2db96fdbe56efc7300242e2420fa2ea6227982f132d"
+    },
+    {
+      "path": "tests/verify-browser-driver-pagination.mjs",
+      "bytes": 6903,
+      "sha256": "0c9ceadec0b13d8b508376e27fb2661e06bd3b432684bf26694a1691b8cf7b25"
+    },
+    {
+      "path": "tests/verify-calculation-questions.mjs",
+      "bytes": 7295,
+      "sha256": "f58e0b4c37251eac03fc05f02aa9833875f112ba8aee0aed06aba4da708896de"
+    },
+    {
+      "path": "tests/verify-chapter-completion-marker.mjs",
+      "bytes": 3678,
+      "sha256": "f2e0b500c46131a4f63e1f08964edb7a762d43f37836c4cd662d646e05fdf21e"
+    },
+    {
+      "path": "tests/verify-choice-images.mjs",
+      "bytes": 23605,
+      "sha256": "a0570f40e001f67a5a915006fa2a47826af9dc266679e6c486011a0e56900365"
+    },
+    {
+      "path": "tests/verify-cli-long-prompt.mjs",
+      "bytes": 1226,
+      "sha256": "a6ce210b069d19995dbce8448554ba2aaf21cbc8283c3c534bab425ccac98835"
+    },
+    {
+      "path": "tests/verify-course-scope.mjs",
+      "bytes": 2780,
+      "sha256": "8760f4944c342b4a0ecd880a006af5a1295b18ff2e6c4eb42c54c59b6212f48a"
+    },
+    {
+      "path": "tests/verify-driver-stop-logging.mjs",
+      "bytes": 8322,
+      "sha256": "79097bd892154dff3ed73a8f2e3816e3ca3bb7c87c5d0eb91fca7f85786297c3"
+    },
+    {
+      "path": "tests/verify-empty-chapter-directory.mjs",
+      "bytes": 2811,
+      "sha256": "d3197fa17484f2c6779620fa716bb2580ec26c0da34bee56e5fd0754e6e141c3"
+    },
+    {
+      "path": "tests/verify-entry-table.mjs",
+      "bytes": 1640,
+      "sha256": "db2b3df0bcd3fda1eda5ffebf88528c781ae9466db1a9a9ee6c808f5d2cd80d4"
+    },
+    {
+      "path": "tests/verify-exam-audio-map.mjs",
+      "bytes": 6305,
+      "sha256": "dc2d5c5ffa2927ac3207c13502c489c4412671adea52845da39964475f003777"
+    },
+    {
+      "path": "tests/verify-exam-audio-materials.mjs",
+      "bytes": 8124,
+      "sha256": "482fb43cae0ddb1ed7bba9bea4d3ffc704e9558c36d6222d18a483be81d78ee0"
+    },
+    {
+      "path": "tests/verify-exam-audio-parts.mjs",
+      "bytes": 823,
+      "sha256": "893ec1daa53e3b9aa4f937789d7afd70c2412de8e779e126d52c566482ec115c"
+    },
+    {
+      "path": "tests/verify-exam-blank-prompts.mjs",
+      "bytes": 1785,
+      "sha256": "f2e0d8ede708566016e763051caf52eca08440df8d1713f2403680e8c5748d35"
+    },
+    {
+      "path": "tests/verify-exam-image-cache.mjs",
+      "bytes": 15879,
+      "sha256": "1ffc013913525cf48d51cbdb846b8684836863b2ea17379d5caaf173cf3aea37"
+    },
+    {
+      "path": "tests/verify-exam-images.mjs",
+      "bytes": 1460,
+      "sha256": "51cd7cea141a532cf6097f96a7c04bbadc8eee7949d72951f503a0c4938853b6"
+    },
+    {
+      "path": "tests/verify-exam-material-completeness.mjs",
+      "bytes": 10647,
+      "sha256": "e3c1ae7f2e609ef14b2275b7c26f4d852c6247db1605cdbb40cf802389ce81fe"
+    },
+    {
+      "path": "tests/verify-exam-material-recovery.mjs",
+      "bytes": 2891,
+      "sha256": "58338e733941deadd674afbe94944a02461f783a9f9f87bbc28dd7a7d66cd9f6"
+    },
+    {
+      "path": "tests/verify-exam-model-retention.mjs",
+      "bytes": 11317,
+      "sha256": "8bcbc40dcf3ac82858e53ffc2bca40b7efb5c519b72e89f36d45861d7fe29f9e"
+    },
+    {
+      "path": "tests/verify-exam-recovery.mjs",
+      "bytes": 10116,
+      "sha256": "edc8ddc870a4fffe16c04e5101a96ffb47c6b67d61f56529bdf7ba21acb9a1c3"
+    },
+    {
+      "path": "tests/verify-exam-result-continuity.mjs",
+      "bytes": 1337,
+      "sha256": "16e88e5aaface70c9ea661e399f58c3e353e623f0ef7e6b5f9230e00a040791e"
+    },
+    {
+      "path": "tests/verify-exam-workflow.mjs",
+      "bytes": 9143,
+      "sha256": "08d2e312c9947d7fc4f6a51a52ab6d8b786cc2e078e85d47293c322b9b6f1384"
+    },
+    {
+      "path": "tests/verify-listening-pipeline.mjs",
+      "bytes": 10769,
+      "sha256": "7cdf0fd6f0e164d08c46a6ffd74aebca04b8e9b43e9fb2c750bb97bf7fd08695"
+    },
+    {
+      "path": "tests/verify-listening-setup.mjs",
+      "bytes": 10488,
+      "sha256": "5680d89e54308be3be4d8853e97ea2f4c58f0a27030c64b3ce12c7154fc32d17"
+    },
+    {
+      "path": "tests/verify-listening.mjs",
+      "bytes": 11637,
+      "sha256": "da4c49b9954c79a95eae0f65229424645c5ac05fe15900ac0abbd4cfd27a53ca"
+    },
+    {
+      "path": "tests/verify-orchestrator.mjs",
+      "bytes": 15660,
+      "sha256": "c329c69459d23085e9683b045561130116b988aa5339abfe0fc2aa8bc8a3523c"
+    },
+    {
+      "path": "tests/verify-portable-package.mjs",
+      "bytes": 15151,
+      "sha256": "6a60482341e9a1bdc735d8bb3c5fd7935b0c881fb0bc585da3cb9a5689037da2"
+    },
+    {
+      "path": "tests/verify-pre-submit-recovery-run.mjs",
+      "bytes": 5127,
+      "sha256": "73c7e0400e7c19fd703df45b762eba6b980cc37cbdd3991da07144400f71c72d"
+    },
+    {
+      "path": "tests/verify-pre-submit-recovery.mjs",
+      "bytes": 10975,
+      "sha256": "8d15f5cd1b59cc55149fcc84f027eca3151cdf8df24ce965cc6539c77b7cd0d8"
+    },
+    {
+      "path": "tests/verify-questions-first-queue.mjs",
+      "bytes": 1329,
+      "sha256": "20a5955d7ef3afa2625d26099e8402e66d38c5d6a6c65a8825620a99c8ab5703"
+    },
+    {
+      "path": "tests/verify-questions-only-driver.mjs",
+      "bytes": 18820,
+      "sha256": "fff9a92d8269b9abacf3d8d16a84a0aa90dbd039f33444af60a715356f160466"
+    },
+    {
+      "path": "tests/verify-quiz-availability.mjs",
+      "bytes": 14823,
+      "sha256": "887eb9b325caa0c0224e7b8528d0df624e5e598b50948c9065d925152bbb0e54"
+    },
+    {
+      "path": "tests/verify-readonly-skip.mjs",
+      "bytes": 9141,
+      "sha256": "a87c6ed591f323724d3b2560eaff528687ab639a9c11447773f95a75b5be0a46"
+    },
+    {
+      "path": "tests/verify-request-cancel.mjs",
+      "bytes": 16007,
+      "sha256": "4bc27beb966e5b1832d087c699befdcc36486ce7dd81c11f9554dc477070af81"
+    },
+    {
+      "path": "tests/verify-selection-state.mjs",
+      "bytes": 6460,
+      "sha256": "f7f3dfd8758d7f5b9b6c6f76f413596af45679d28c7d828dc65799475c74ed6d"
+    },
+    {
+      "path": "tests/verify-session-bootstrap.mjs",
+      "bytes": 30142,
+      "sha256": "0868f7219272728cdbd2df4cd8fe52fa05c358ff99152cf4c162d8ab224edebb"
+    },
+    {
+      "path": "tests/verify-session-diagnostics.mjs",
+      "bytes": 2399,
+      "sha256": "6c36833a8998779a9f5263f5ea33d40a47c5530c9ab515d62c4eaa61c2133da9"
+    },
+    {
+      "path": "tests/verify-step-navigation.mjs",
+      "bytes": 11771,
+      "sha256": "d2703563ff48f5d580bdc65d020bbc2441057c558d533213d260825a829b83c6"
+    },
+    {
+      "path": "tests/verify-stop-race.mjs",
+      "bytes": 8473,
+      "sha256": "11adfa522321a41ef52d8630490b98b1f661ba84f093604e452eeb4f2810fb6b"
+    },
+    {
+      "path": "tests/verify-targeted-run.mjs",
+      "bytes": 7632,
+      "sha256": "526e28837e0f211287adceb42f2e8395d39543101f02f8aace14562454d6402a"
+    },
+    {
+      "path": "tests/verify-task-ledger.mjs",
+      "bytes": 8954,
+      "sha256": "7fb5299c834dde260720c82057698dff56d66ebe14a0e4fd937a52ba80421517"
+    },
+    {
+      "path": "tests/verify-text-questions.mjs",
+      "bytes": 8426,
+      "sha256": "e4aa0b46845a8f43e6ba25313bcbe2a3c1c8b4ec04174c3cdf63f5dabab92998"
+    },
+    {
+      "path": "tests/verify-transcriber-local.mjs",
+      "bytes": 1512,
+      "sha256": "2f7ddabac5e959ed63f6c136ed76da1a3b777ad71c9493bd3dca5e1e43d3b685"
+    },
+    {
+      "path": "tests/verify-wb-cli.mjs",
+      "bytes": 6916,
+      "sha256": "0253110e75c2b175100cbc780f47d5552a828f37ccaa9d7cbe883dcbfeac377e"
+    },
+    {
+      "path": "tests/verify-wb-receipts.mjs",
+      "bytes": 12311,
+      "sha256": "21823a032fec75e109ba9fa99b53c0db50cfdf6be63de04aeb42106cd8b456fd"
+    },
+    {
+      "path": "tests/verify-work-option-state.mjs",
+      "bytes": 10835,
+      "sha256": "01637204afef0fd42e52cf20f0efcda7299506a685419d86f79fc6d319d579a1"
+    },
+    {
+      "path": "tests/verify-work-preview-driver.mjs",
+      "bytes": 1028,
+      "sha256": "ae3dba498ebfd5b659d16fe1c757f545a37676b0be11cdf45481de3dc96f4b2d"
+    },
+    {
+      "path": "tests/verify-work-preview.mjs",
+      "bytes": 3888,
+      "sha256": "78d8f2f1366779e54f2a9d962476431dfb24746564a9353afe3b33d28d90a45b"
+    },
+    {
+      "path": "tests/verify-workflow-improvements.mjs",
+      "bytes": 1931,
+      "sha256": "5d9e487b2ed769a839ce6132f3d52df524e4925e6abff5a5d9140cebcf02bc74"
+    },
+    {
+      "path": "tests/verify-workflow-portable.mjs",
+      "bytes": 3082,
+      "sha256": "114993b2be4c1a85eb94ad02416d74a877c2b2d7064d24f66d506c47644ba704"
+    },
+    {
+      "path": "tests/verify-workflow-setup.mjs",
+      "bytes": 21468,
+      "sha256": "47d1b61480ea369ecf030d0e60a15b23ff0d00efdeb8ace5c93d874ced952588"
+    },
+    {
+      "path": "WORKBUDDY_START.md",
+      "bytes": 2465,
+      "sha256": "e33fa832ae9707f46639e42fb0bc12b2a497229ead88a119e17cb4835a8a6670"
+    },
+    {
+      "path": "启动学习通总控.cmd",
+      "bytes": 62,
+      "sha256": "cc4d511fa883ea8ca3b28ef7b325caf74bb0eb55f075b260bfdfb15659fb0515"
+    },
+    {
+      "path": "安装与检查.cmd",
+      "bytes": 587,
+      "sha256": "21270098d27207c0c333929fe6cdc1b1620a83f88374793fb3bdefbd358002ee"
+    },
+    {
+      "path": "恢复专用Edge.cmd",
+      "bytes": 726,
+      "sha256": "90fc86e0519a8ff680375b5cb9a887f21e2d1846c4d43f87cfd8c83200e45d9a"
+    },
+    {
+      "path": "查看专用Edge状态.cmd",
+      "bytes": 500,
+      "sha256": "8260e871f5b84ca1b979016039407a70dc417e7514878c9fb8dfa0454e4087fc"
+    },
+    {
+      "path": "登录CodeBuddy.cmd",
+      "bytes": 525,
+      "sha256": "c2e829eb8ba8a20d74ec1c0ddbd832e2f4b5113e7258cf76e1530c66f420344e"
+    },
+    {
+      "path": "首次启动专用Edge.cmd",
+      "bytes": 757,
+      "sha256": "ebda4e0d2319bd907289e43703fd9b57aa691c927b1985b54f9fff16095b21b2"
+    }
+  ],
+  "generatedFiles": [
+    "package-manifest.json"
+  ],
+  "exclusions": [
+    {
+      "scope": ".git,node_modules,.tmp,.automation.local,work,img",
+      "reason": "private-state-dependencies-and-local-materials"
+    },
+    {
+      "scope": "original-root-documents-and-deliverables",
+      "reason": "replaced-by-public-distribution-templates"
+    },
+    {
+      "scope": "tests/verify-project-migration.mjs",
+      "reason": "historical-machine-specific-migration-audit"
+    },
+    {
+      "scope": "tests/verify-v3.mjs,scripts/build-userscript.mjs,root-userscripts",
+      "reason": "legacy-userscript-outside-this-workflow-package"
+    },
+    {
+      "scope": "non-allowlisted-files",
+      "reason": "explicit-source-allowlist-only"
+    }
+  ],
+  "verification": "Source integrity and packaging only; no browser, model, account or live task validation."
+}

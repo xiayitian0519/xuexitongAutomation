@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {JSDOM} from 'jsdom';
+import {ExamPage} from '../automation/exam-page.mjs';
+const identity={courseKey:'course:1:2',examId:'123',title:'Unit 5单元测试'};
+const dom=new JSDOM('<h1>交卷成功</h1><p>最终成绩94分</p>',{url:'https://fixture.chaoxing.com/exam-ans/exam/test/look?examId=123',runScripts:'outside-only'});
+dom.window.HTMLElement.prototype.getClientRects=function(){return [{}];};Object.defineProperty(dom.window.HTMLElement.prototype,'innerText',{get(){return this.textContent;}});
+const page={url:()=>dom.window.location.href,evaluate:async(fn,arg)=>dom.window.eval('('+fn.toString()+')')(arg)};
+assert.equal((await new ExamPage(page,identity).read()).identityMatches,false);
+const view=await new ExamPage(page,identity,{verifiedResultRecovery:true}).read();assert.equal(view.identityMatches,true);assert.equal(view.result.score,94);
+assert.equal((await new ExamPage(page,{...identity,examId:'999'},{verifiedResultRecovery:true}).read()).identityMatches,false);
+dom.reconfigure({url:'https://fixture.chaoxing.com/exam-ans/exam/test/examcode/examnotes?examId=123'});
+assert.equal((await new ExamPage(page,identity,{verifiedResultRecovery:true}).read()).identityMatches,false);
+dom.window.close();console.log('PASS 5 submitted identity continuity checks; no browsers');

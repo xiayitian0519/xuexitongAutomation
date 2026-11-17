@@ -1,0 +1,25 @@
+{
+  "name": "xuexitong-workflow",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "test": "node tests/verify-workflow-improvements.mjs",
+    "test:exam-materials": "node tests/verify-exam-material-recovery.mjs",
+    "test:portable": "node tests/verify-workflow-portable.mjs",
+    "setup": "node automation/setup.mjs --check",
+    "setup:install": "node automation/setup.mjs --install",
+    "session:status": "node automation/session-owner.mjs --status",
+    "package:workflow": "node scripts/package-workflow.mjs",
+    "status": "node automation/control.mjs --status"
+  },
+  "dependencies": {
+    "playwright-core": "1.62.1"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.1",
+    "jquery": "4.0.0"
+  }
+}
